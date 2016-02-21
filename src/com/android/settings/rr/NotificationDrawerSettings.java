@@ -35,6 +35,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
 import com.android.internal.logging.MetricsLogger;
+import cyanogenmod.providers.CMSettings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -43,58 +44,16 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment  implements Preference.OnPreferenceChangeListener, Indexable{
-    private static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
-private static final String PREF_CUSTOM_HEADER = "status_bar_custom_header";
-    private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
- private static final String PREF_ENABLE_TASK_MANAGER = "enable_task_manager";
- private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
-
-    private SwitchPreference mForceExpanded;
-    private SwitchPreference mCustomHeader;	
-    private ListPreference mCustomHeaderDefault;
-    private SwitchPreference mEnableTaskManager;
-    private SwitchPreference mBlockOnSecureKeyguard;
+	
+    	
     private static final int MY_USER_ID = UserHandle.myUserId();
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.notification_drawer_settings);
-        PreferenceScreen prefSet = getPreferenceScreen();
-        final ContentResolver resolver = getActivity().getContentResolver();
-	final CmLockPatternUtils lockPatternUtils = new CmLockPatternUtils(getActivity());
+        ContentResolver resolver = getActivity().getContentResolver();
+	addPreferencesFromResource(R.xml.notification_drawer_settings);
+	PreferenceScreen prefSet = getPreferenceScreen();
 
-            // Block QS on secure LockScreen
-            mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
-            if (lockPatternUtils.isSecure(MY_USER_ID)) {
-                mBlockOnSecureKeyguard.setChecked(Settings.Secure.getIntForUser(resolver,
-                        Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1, UserHandle.USER_CURRENT) == 1);
-                mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
-           } else if (mBlockOnSecureKeyguard != null) {
-                prefSet.removePreference(mBlockOnSecureKeyguard);
-            }
-
-	mForceExpanded = (SwitchPreference) findPreference(FORCE_EXPANDED_NOTIFICATIONS);
-        mForceExpanded.setChecked((Settings.System.getInt(resolver, Settings.System.FORCE_EXPANDED_NOTIFICATIONS, 0) == 1));
-
- 
-        // Status bar custom header
-        mCustomHeader = (SwitchPreference) prefSet.findPreference(PREF_CUSTOM_HEADER);
-        mCustomHeader.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1));
-        mCustomHeader.setOnPreferenceChangeListener(this);
-
-         // Status bar custom header hd
-        mCustomHeaderDefault = (ListPreference) findPreference(PREF_CUSTOM_HEADER_DEFAULT);
-        mCustomHeaderDefault.setOnPreferenceChangeListener(this);
-           int customHeaderDefault = Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, 0);
-        mCustomHeaderDefault.setValue(String.valueOf(customHeaderDefault));
-
-
-        // Task manager
-        mEnableTaskManager = (SwitchPreference) prefSet.findPreference(PREF_ENABLE_TASK_MANAGER);
-        mEnableTaskManager.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.ENABLE_TASK_MANAGER, 0) == 1));
 
     }
 
@@ -111,47 +70,10 @@ private static final String PREF_CUSTOM_HEADER = "status_bar_custom_header";
 	@Override
 	public boolean onPreferenceChange(Preference preference, Object newValue) {
 	ContentResolver resolver = getActivity().getContentResolver();
-	 if (preference == mCustomHeader) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER,
-                    (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mCustomHeaderDefault) {
-           int customHeaderDefault = Integer.valueOf((String) newValue);
-            Settings.System.putIntForUser(getContentResolver(), 
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT,
-                    customHeaderDefault, UserHandle.USER_CURRENT);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER,
-                    0);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER,
-                    1);
-            return true;
-         }else if (preference == mBlockOnSecureKeyguard) {
-                Settings.Secure.putInt(resolver,
-                        Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
-                        (Boolean) newValue ? 1 : 0);
-                return true;
-	}
+	Resources res = getResources();
          return false;
 	}
 
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if  (preference == mForceExpanded) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.FORCE_EXPANDED_NOTIFICATIONS, checked ? 1:0);
-            return true;
-        } else  if  (preference == mEnableTaskManager) {
-            boolean enabled = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.ENABLE_TASK_MANAGER, enabled ? 1:0);  
-	}    
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
 
    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {

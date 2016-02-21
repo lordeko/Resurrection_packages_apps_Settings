@@ -123,14 +123,6 @@
             android:key="@string/category_key_device"
             android:title="@string/header_category_device" >
 
-
-        <!-- Home -->
-        <dashboard-tile
-                android:id="@+id/home_settings"
-                android:title="@string/home_settings"
-                android:fragment="com.android.settings.HomeSettings"
-                android:icon="@drawable/ic_settings_home"/>
-
         <!-- Sound -->
         <dashboard-tile
                 android:id="@+id/sound_settings"
@@ -160,7 +152,7 @@
                 android:id="@+id/lockscreen_settings"
                 android:title="@string/lockscreen_settings"
                 android:fragment="com.android.settings.SecuritySettings"
-                android:icon="@drawable/ic_settings_security">
+                android:icon="@drawable/rr_lock_icon">
                 <extra android:name="filter_type" android:value="0" />
 	</dashboard-tile>
 
@@ -241,7 +233,6 @@
                 android:title="@string/profiles_settings_title"
                 android:icon="@drawable/ic_settings_profiles"
                 />
-
 
         <!-- Application Settings -->
         <dashboard-tile

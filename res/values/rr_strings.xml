@@ -99,9 +99,10 @@
     <string name="icons_category">Status Bar Icons</string>
     <string name="misc_category">Misc Statusbar Settings</string>
 
-    <string name="recents_panel_search_category">Recent SearchBar</string>
-    <string name="recents_panel_memory_category">Memory Bar</string>
     <string name="recents_panel_clear_all_category"> Clear All Tweaks</string>
+    <string name="recents_panel_recents_view"> Recents View</string>
+    <string name="recents_panel_alternative_recents">Alternative Recents</string>
+    <string name="recents_panel_recents_bars">Recents Bars</string>
     <string name="gestures_settings">Gestures</string>	
 
 
@@ -136,15 +137,16 @@
     <string name="brokenextrainfo_summary">Display extra info for cpu, display, etc</string>
 
     <!--Time Contexual Header -->
+    <string name="contexual_header_title">Contexual header</string>
     <string name="status_bar_custom_header_title">Time Contextual Header</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
-    <string name="status_bar_custom_header_default_title">Use poly HD images</string>
-    <string name="status_bar_custom_header_default_summary">Enable for poly hd images. Disable for original images.</string>
-    <string name="status_bar_custom_header_default_title">Select your images</string>
-    <string name="status_bar_custom_header_default_summary">Default, modern and poly HD</string>
+    <string name="daylight_header_pack_title">Header image pack</string>
     <string name="custom_header_image_0">Default</string>
     <string name="custom_header_image_1">Modern</string>
     <string name="custom_header_image_2">Poly HD</string>
+    <string name="status_bar_custom_header_shadow_title">Shadow header image</string>
+    <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
+    <string name="unit_percent">\u0025</string>
  
 
     <!-- RR Extra Info -->
@@ -210,6 +212,11 @@
 
     <!--Notification Drawer-->
     <string name="notification_drawer_title">Notification Drawer</string>
+    <string name="rr_qs_cat">Quick Settings PullDown</string>
+    <string name="rr_qs">Quick Settings</string>
+    <string name="rr_brightness_cat">Brightness Slider</string>
+    <string name="rr_qs_title">QuickSettings Panel </string>
+
 
     <!-- Quick settings quick pull down -->
     <string name="status_bar_quick_qs_pulldown_title">Quick Pulldown</string>
@@ -224,10 +231,14 @@
     <string name="heads_up_notifications">Heads up</string>
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
     <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
-
+    <string name="headsup_options_header">Heads Up Options</string>
+    <string name="heads_up_snooze_title">Snooze</string>
+   <string name="heads_up_snooze">Snooze</string>
+   <string name="heads_up_timeout">Timeout</string>
+ 
    <!-- Navigation Bar -->
     <string name="navigation_bar_dimensions_reset_message">Reset all dimensions entries to default?</string>
-    <string name="navigation_bar_dimensions_title"><b>Nav bar dimensions</b></string>
+    <string name="navigation_bar_dimensions_title">Nav bar dimensions</string>
     <string name="navigation_bar_dimensions_title_summary">Resize the navigation bar</string>
         <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_summary">Navigation bar height while in portrait</string>
@@ -272,6 +283,13 @@
     <string name="clock_font_medium_italic">Medium Italic</string>
     <string name="clock_font_black">Black</string>
     <string name="clock_font_black_italic">Black Italic</string>
+    <string name="clock_font_dancingscript">DancingScript</string>
+    <string name="clock_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="clock_font_comingsoon">ComingSoon</string>
+    <string name="clock_font_notoserif">NotoSerif Normal</string>
+    <string name="clock_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="clock_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
     <string name="clock_font_size_title">Font size</string>
     <string name="status_bar_show_clock_second_title">Clock seconds</string>
     <string name="clock_font_size_4">4</string>
@@ -302,6 +320,17 @@
     <string name="display_lockscreen_rotation_title">Lock screen</string>
 	<!-- Lock screen settings -->
     <string name="rr_lockscreen_title">Lock Screen</string>
+    <string name="rr_ls_ui">Lock Screen UI</string>
+    <string name="rr_lockscreen_date">Date and Time</string>
+    <string name="rr_ls_security_main">LockScreen Security</string>
+    <string name="rr_lockscreen_notifications">LockScreen Notifications</string>
+    <string name="rr_ls_security">Security</string>
+    <string name="rr_ls_gestures">Lockscreen Gestures</string>
+    <string name="rr_ls_media">LockScreen Media</string>
+    <string name="rr_ls_gesures">LockScreen Gestures</string>
+    <string name="rr_ls_settings">Cuztomizations</string>
+    <string name="rr_lockscreen_blur">LockScreen Blur</string>
+    <string name="rr_lockscreen_style">Styles</string>	
     <string name="double_tap_ls">Double Tap Sleep LockScreen</string>
     <string name="double_tap_ls_summary">Double tap lockscreen to put the device to sleep</string>	
 
@@ -484,6 +513,8 @@
      <string name="show_network_traffic_1000">1000 ms</string>
      <string name="show_network_traffic_1500">1500 ms</string>
      <string name="show_network_traffic_2000">2000 ms</string>
+     <string name="network_traffic_hidearrow">Hide arrows</string>
+     <string name="network_traffic_hidearrow_summary">Hide the arrows in the traffic indicators</string>
      <string name="network_traffic_autohide">Auto hide</string>
      <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
      <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
@@ -500,7 +531,6 @@
     <string name="pref_scrollingcache_force_disable">Force disable</string>
 
     <!-- OmniSwitch -->
-    <string name="omniswitch_category">OmniSwitch</string>
     <string name="recents_use_omniswitch_title">Use for recents</string>
     <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
     <string name="omniswitch_start_settings_title">Settings</string>
@@ -529,7 +559,6 @@
    <!-- HW keys Switch -->
     <string name="disable_hwkeys_title">Disable HW keys</string>
     <string name="disable_hwkeys_summary">Enable/Disable Hardware Keys </string>
-
 
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
@@ -848,12 +877,13 @@
 
     <string name="lockscreen_shortcuts_category">Shortcuts</string>
 
-
     <!-- Lockscreen shortcuts -->
-    <string name="lockscreen_shortcuts_title">Lockscreen Shortcuts</string>
+    <string name="lockscreen_shortcuts_title">Quick Shortcuts</string>
     <string name="lockscreen_shortcuts_summary">Change the shortcuts on lockscreen to whatever you want</string>
-    <string name="lockscreen_shorcuts_longpress_title">Shortcuts DoupleTap</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on Double Tap</string>
+    <string name="lockscreen_shortcuts_launch_type_title">Shortcut click type</string>
+    <string name="lockscreen_shortcuts_single_tap">Click</string>
+    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
 
     <string name="shortcut_action_app">Custom app</string>
     <string name="shortcut_action_home">Home</string>
@@ -898,36 +928,6 @@
     <string name="su_indicator">Superuser indicator</string>
     <string name="su_indicator_summary_on">Superuser indicator is visible when a session is active</string>
     <string name="su_indicator_summary_off">Toggle to show superuser indicator when a session is active.Only For CM inbuilt Root</string>
-
-     <!-- App sidebar -->
-     <string name="app_sidebar_title">App Sidebar</string>
-     <string name="app_sidebar_enable_title">Enable App Sidebar</string>
-     <string name="app_sidebar_enable_summaryOn">App Sidebar is enabled</string>
-     <string name="app_sidebar_enable_summaryOff">App Sidebar is disabled</string>
-     <string name="app_sidebar_setup_items_title">Setup sidebar content</string>
-     <string name="app_sidebar_setup_items_summary">Add, remove, and position items in the sidebar</string>
-     <string name="app_sidebar_transparency_title">Sidebar transparency</string>
-     <string name="app_sidebar_transparency_summary">Adjust the sidebar transparency level</string>
-     <string name="app_sidebar_position_title">Sidebar position</string>
-     <string name="app_sidebar_position_summary">Position the sidebar on the left or right side of the screen</string>
-     <string name="app_sidebar_position_left">Left</string>
-     <string name="app_sidebar_position_right">Right</string>
-     <string name="app_sidebar_hide_labels_title">Hide icon labels</string>
-     <string name="app_sidebar_hide_labels_summary">Hide sidebar icon labels</string>
-     <string name="tab_category">Visible Tab</string>
-     <string name="use_tab_title">Display tab</string>
-     <string name="use_tab_summary">Display a visible tab on the side which will display the sidebar when touched.</string>
-     <string name="tab_position_title">Tab location</string>
-     <string name="tab_position_summary">Display the tab on the top, middle, or bottom on the side of the screen.</string>
-     <string name="tab_size_title">Tab size</string>
-     <string name="tab_size_summary">Change the size of the visible tab.</string>
-     <string name="trigger_category">Trigger region</string>
-     <string name="trigger_width_title">Trigger width</string>
-     <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-     <string name="trigger_top_title">Trigger position</string>
-     <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-     <string name="trigger_bottom_title">Trigger height</string>
-     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
      <string name="rr_misc_title">Miscellaneous</string>
      <string name="rr_systemuituner">System UI tuner</string>
@@ -986,6 +986,13 @@
     <string name="status_bar_rr_logo_title">Enable logo</string>
     <string name="status_bar_rr_logo_summary">Enable to show logo on the left side of statusbar</string>
     <string name="status_bar_rr_logo_color">Logo color</string>
+    <string name="status_bar_rr_logo_position">Logo location</string>
+    <string name="status_bar_rr_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_logo_position_right">Right</string>
+    <string name="status_bar_logo_position_left">Left</string>
+    <string name="status_bar_logo_position_center">Center</string>
+    <string name="status_bar_logo_position_before">Before StatusBar Icons</string>	
+
 
 
     <!-- Selinux Switch -->
@@ -1066,6 +1073,13 @@
     <string name="status_bar_weather_font_medium_italic">Medium Italic</string>
     <string name="status_bar_weather_font_black">Black</string>
     <string name="status_bar_weather_font_black_italic">Black Italic</string>	
+     <string name="status_bar_weather_font_dancingscript">DancingScript</string>
+    <string name="status_bar_weather_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="status_bar_weather_font_comingsoon">ComingSoon</string>
+    <string name="status_bar_weather_font_notoserif">NotoSerif Normal</string>
+    <string name="status_bar_weather_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>	
 
     <!-- Resurrection OTA -->
     <string name="updater_title">Updates</string>
@@ -1094,8 +1108,7 @@
     <string name="camera_sounds_summary">Enable system camera shutter sound</string>
     <string name="camera_sound_warning_dialog_text">Disabling the camera shutter sound is illegal in some areas! Please check the applicable law in your country</string>
 
-     <!-- Slim Recents -->
-    <string name="rr_recent_slim_category">Slim Recents</string>	
+     <!-- Slim Recents -->	
     <string name="slim_recents_panel">Slim Recents</string>
     <string name="use_slim_recents_title">Slim recents</string>
     <string name="show_running_tasks_title">Only show running apps</string>
@@ -1366,9 +1379,9 @@
     <string name="power_menu_animation_bottom">Bottom</string>
     <string name="power_menu_animation_top">Top</string>
     <string name="power_menu_animation_rotate">Rotation</string>
-    <string name="power_menu_animation_xylon">Fly</string>
+    <string name="power_menu_animation_xylon">Flying</string>
     <string name="power_menu_animation_slide">Slide</string>
-    <string name="power_menu_animation_turn">Turn</string>
+    <string name="power_menu_animation_turn">Turning</string>
     <string name="power_menu_animation_fly">Glow</string>
     <string name="power_menu_animation_card">3D</string>
     <string name="power_menu_animation_translucent_top">Translucent (top)</string>
@@ -1406,18 +1419,23 @@
   
     <!-- 4G LTE switch -->
     <string name="show_fourg_title">Show 4G instead of LTE</string>
-    <string name="show_fourg_summary">Replaces LTE statusbar indicator with 4G</string>
+    <string name="show_fourg_summary">Replaces LTE statusbar indicator with 4G . Requires Reboot</string>
+    <string name="statusbar_tuner_category_title">Hide items from statusbar</string>
+
+    <!-- 3G / HSPA switch -->
+    <string name="show_threeg_title">Show 3G instead of HSPA</string>
+    <string name="show_threeg_summary">Replaces H+ statusbar indicator with 3G . Requires Reboot</string>
     <string name="statusbar_tuner_category_title">Hide items from statusbar</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Lock Clock Fonts</string>
     <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
     <string name="lock_clock_font_dialog_title">Select lock clock font</string>
-    <string name="lock_clock_font_normal">Roboto (default)</string>
+    <string name="lock_clock_font_normal">Roboto</string>
     <string name="lock_clock_font_bold">Roboto Bold</string>
     <string name="lock_clock_font_italic">Roboto Italic</string>
     <string name="lock_clock_font_bold_italic">Roboto Bold Italic</string>
-    <string name="lock_clock_font_light_normal">Roboto Light</string>
+    <string name="lock_clock_font_light_normal">Roboto Light (default)</string>
     <string name="lock_clock_font_light_italic">Roboto Light Italic</string>
     <string name="lock_clock_font_thin_normal">Roboto Thin</string>
     <string name="lock_clock_font_thin_italic">Roboto Thin Italic</string>
@@ -1431,6 +1449,13 @@
     <string name="lock_clock_font_black_italic">Roboto Black Italic</string>
     <string name="lock_clock_font_condensed_light_normal">Roboto Condensed Light</string>
     <string name="lock_clock_font_condensed_light_italic">Roboto Condensed Light Italic</string>
+    <string name="lock_clock_font_dancingscript">DancingScript</string>
+    <string name="lock_clock_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="lock_clock_font_comingsoon">ComingSoon</string>
+    <string name="lock_clock_font_notoserif">NotoSerif Normal</string>
+    <string name="lock_clock_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="lock_clock_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="lock_clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
 
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sound</string>
@@ -1495,7 +1520,7 @@
     <string name="dlg_reset_rr">RR</string>
     <string name="dlg_reset_values_message">Reset values to default?</string>	
     <string name="dlg_reset_android">Ok</string>	
-    <string name="cat_colors_title">Notification Customizations</string>
+    <string name="cat_colors_title">Customizations</string>
     <string name="background_title">Notification Background</string>
     <string name="icon_title">Icon</string>
     <string name="colors_title">Colors</string>
@@ -1513,4 +1538,173 @@
     <string name="notification_color_mode_always_title">Always</string>
     <string name="notification_drawer_clear_all_icon_color_title">Clear all icon</string>
  <string name="notif_color_switch">Notification Colors</string>
+
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">Lockscreen torch</string>
+    <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
+
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_dialog_title">Select recents view</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
+
+    <!-- Annoying Notifications -->
+    <string name="notifications_category_title">Notifications</string>
+    <string name="less_notification_sounds_title">Less frequent notification sounds</string>
+    <string name="less_notification_sounds_summary">Limit the notification sounds of each app to only play once per set time period</string>
+    <string name="less_notification_sounds_default">Default Behaviour</string>
+    <string name="less_notification_sounds_3s">3 seconds</string>
+    <string name="less_notification_sounds_5s">5 seconds</string>
+    <string name="less_notification_sounds_10s">10 seconds</string>
+    <string name="less_notification_sounds_15s">15 seconds</string>
+    <string name="less_notification_sounds_30s">30 seconds</string>
+    <string name="less_notification_sounds_45s">45 seconds</string>
+    <string name="less_notification_sounds_1m">1 minute</string>
+    <string name="less_notification_sounds_2m">2 minutes</string>
+    <string name="less_notification_sounds_5m">5 minutes</string>
+
+    <!-- Dashboard settings -->
+    <string name="dashboard_category">Dashboard settings</string>
+    <string name="dashboard_columns_title">Dashboard Columns</string>
+    <string name="dashboard_columns_summary">Change the number of columns displayed in the dashboard</string>
+    <string name="dashboard_columns_dialog_title">Select dashboard columns</string>
+    <string name="dashboard_columns_one">One</string>
+    <string name="dashboard_columns_two">Two</string>
+    <string name="dashboard_columns_three">Three</string>
+    <string name="dashboard_tileview_double_lines_title">Dashboard title view</string>
+    <string name="dashboard_tileview_double_lines_summary">Show dashboard tile titles in 2 lines</string>
+    <string name="dashboard_tileview_dividers_title">Dashboard dividers</string>
+    <string name="dashboard_tileview_dividers_summary">Hide dashboard tile dividers</string>
+
+    <!-- Breathing Notifications -->
+    <string name="breathing_notifications_category">Notifications</string>
+    <string name="breathing_notifications_sms">Messaging</string>
+    <string name="breathing_voice_category">Voice</string>
+    <string name="breathing_category">Breathing Notifications</string>	
+    <string name="breathing_notifications_title">Breathing notifications</string>
+    <string name="missed_call_breath_title">Breathing Missed Call</string>
+    <string name="missed_call_breath_summary">Will give your missed call notifications a breathing effect in the statusbar</string>
+    <string name="voicemail_breath_title">Breathing Voicemail</string>
+    <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the statusbar</string>
+    <string name="sms_breath_title">Breathing SMS</string>
+    <string name="sms_breath_summary">Will give your SMS notifications a breathing effect in the statusbar</string>
+
+     <!-- QS header transparency -->
+    <string name="qs_transparent_header">QS header Opacity</string>
+
+ <!-- Volume dialog transparency -->
+   <string name="volume_dialog_transparency">Volume dialog Opacity</string>
+
+
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Power menu Opacity</string>
+
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Power dialog dim background amount</string>
+
+    <!-- Ability to disable hardware keys via nav bar settings -->	
+   <string name="hw_keys_title">Hardware keys</string>
+   <string name="hw_keys_summary">Enable hardware keys</string>
+
+    <!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">Lockscreen items</string>
+    <string name="hide_lockscreen_clock_title">Show lockscreen clock</string>
+    <string name="hide_lockscreen_date_title">Show lockscreen date</string>
+
+
+    <!-- Status bar header font style -->
+    <string name="status_bar_header_font_style_title">Other Text Font styles</string>
+
+    <!-- Notification Header Customizations -->
+    <string name="notification_customizations">Notification Header </string>	
+    <string name="notification_panel_title">Notification Header</string>
+    <string name="notifications_fonts">Fonts</string>	
+    <string name="notifications_header">Header Tweaks </string>	
+    <string name="notifications_items">Notification Header Items</string>
+    <string name="hide_panel_items_title">Notification Panel Icons </string>
+    <string name="hide_panel_clock_title">Show Notification Panel clock</string>
+    <string name="hide_panel_date_title">Show Notification Panel date</string>
+    <string name="hide_panel_clockvalue">Show Clock Detail</string>
+    <string name="hide_panel_battery">Show Notification Panel Battery Text</string>
+    <string name="hide_panel_icons">Show Notification Icons</string>
+    <string name="hide_panel_alarm_title">Hide Alarm</string>	
+    <string name="hide_settings_icon">Show Notification Panel Settings button</string>
+    <string name="hide_user_icon">Show Notification Panel UserSwitcher</string>	
+    <string name="status_bar_header_clock_font_style_title">Notification Panel Clock Font</string>
+    <string name="status_bar_header_weather_font_style">Notification Panel  Weather Font</string>
+    <string name="status_bar_header_weather_font_style_title">Notification Panel  Weather Font</string>
+    <string name="status_bar_header_date_font_style">Notification Panel Date Font</string>
+    <string name="status_bar_header_alarm_style_title">Notification Panel  Alarm Font</string>
+    <string name="status_bar_header_detail_font_style_title">Notification Panel Am/PM Font</string>
+    <string name="panel_clock_sum">Show / Hide Clock In Header In Header</string>
+    <string name="panel_date_sum">Show / Hide Date In Header In Header</string>
+    <string name="panel_ampm_sum">Show / Hide AM / PM Values In Header</string>
+    <string name="panel_battery_sum">Show / Hide Battery Percentange While Charging In Header</string>
+    <string name="panel_icons_sum">Show / Hide System Icons Like Battery In Header</string>	
+    <string name="panel_user_sum">Show / Hide Users Switch Icon In Header</string>
+    <string name="panel_settings_sum">Show / Hide Settings Icon In Header</string>	
+    <string name="hide_panel_alarm_sum">Show / Hide Next Alarm In Header</string>
+    <string name="notifications_misc">Misc</string>
+
+    <!--Summary on/off-->	
+    <string name="hide_clock_summary_on">Clock Shown</string>	
+    <string name="hide_clock_summary_off">Clock Hidden</string>
+    <string name="hide_panel_date_summary_on">Date Shown</string>	
+    <string name="hide_panel_date_summary_off">Date Hidden</string>
+
+    <string name="hide_ampm_summary_on">AM/PM Visible</string>	
+    <string name="hide_ampm_summary_off">AM/PM Hidden</string>
+  
+    <string name="hide_alarm_summary_on">Next Alarm Hidden</string>	
+    <string name="hide_alarm_summary_off">Next Alarm Visible</string>
+    <string name="hide_panel_ampm_summary_on">Am/Pm Visible</string>	
+    <string name="hide_panel_ampm_summary_off">Am/Pm Hidden</string>
+    
+    <string name="hide_battery_summary_on">Battery Visible</string>	
+    <string name="hide_battery_summary_off">Batteryu Hidden</string>
+    <string name="hide_icons_summary_on">System Icons Visible</string>	
+    <string name="hide_icons_summary_off">System Icons Hidden</string>
+   
+    <string name="hide_settings_summary_on">Settings Button Visible</string>	
+    <string name="hide_settings_summary_off">Settings Button hidden</string>
+    <string name="hide_user_summary_on">User Switch Visible</string>	
+    <string name="hide_user_summary_off">User Switch Hidden</string>
+    <string name="hide_weather_summary_on">Weather Shown</string>	
+    <string name="hide_weather_summary_off">Weather Hidden</string>          
+  
+    <string name="header_color">Colors</string>
+    <string name="header_clock_color">Header Clock Color</string>
+    <string name="header_detail_color">Header Date Color</string>
+    <string name="header_weatherone_color">Weather Text Color Line 1</string>
+    <string name="header_weathertwo_color">Weather Text Color Line 2</string>
+    <string name="header_battery_text_color">Battery Text Color While Charging</string>
+    <string name="header_alarm_text_color">Next Alarm Text Color</string>	
+    <string name="header_colors_reset_title">Reset Header Color</string>
+    <string name="header_colors_reset_message">Reset Header Color Back to Default</string>
+
+    <!-- Navbar buttons rotating icons -->
+    <string name="nav_buttons_rotation_title">Rotation animation for icons</string>
+    <string name="nav_buttons_rotation_summary">Enable for icons to rotate when screen is rotated or navbar recreated.</string>
+
+    <!--Smart PullDown-->	
+    <string name="smart_pulldown_title">Smart pulldown</string>
+    <string name="smart_pulldown_summary">Open Quick Settings when there are %1$s notifications present</string>
+    <string name="smart_pulldown_off">Off</string>
+    <string name="smart_pulldown_dismissable">No dismissable</string>
+    <string name="smart_pulldown_persistent">No persistent</string>
+    <string name="smart_pulldown_all">No dismissable or persistent</string>
+
+     <!-- Date position -->
+    <string name="clock_date_position">Date position</string>
+    <string name="clock_date_right">Right of time</string>
+    <string name="clock_date_left">Left of time</string>
+
+    <!-- QS Tiles Columns -->
+    <string name="qs_num_columns_title">Number of QS tiles per row</string>
+    <string name="qs_num_columns_showing">%1$s tiles per row showing</string>
+
 </resources>

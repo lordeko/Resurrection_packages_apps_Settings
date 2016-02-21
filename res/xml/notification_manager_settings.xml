@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015 The CyanogenMod Project
+     Copyright (C) 2015-2016 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,11 +18,10 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <!-- Heads up -->
-    <com.android.settings.cyanogenmod.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
+    <Preference
+            android:key="heads_up_notifications"
             android:title="@string/heads_up_notifications"
-            android:summaryOn="@string/summary_heads_up_enabled"
-            android:summaryOff="@string/summary_heads_up_disabled" />
+            android:fragment="com.android.settings.headsup.HeadsUpSettings" />
 
     <!-- Zen Mode -->
     <PreferenceScreen
@@ -30,13 +29,6 @@
             android:title="@string/zen_mode_settings_title"
             settings:keywords="@string/keywords_sounds_and_notifications_interruptions"
             android:fragment="com.android.settings.notification.ZenModeSettings" />
-
-    <!-- Do Not Disturb access -->
-    <Preference
-            android:key="manage_zen_access"
-            android:title="@string/manage_zen_access_title"
-            android:persistent="false"
-            android:fragment="com.android.settings.notification.ZenAccessSettings" />
 
     <!-- When device is locked -->
     <com.android.settings.DropDownPreference

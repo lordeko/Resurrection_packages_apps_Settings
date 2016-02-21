@@ -27,6 +27,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -69,11 +70,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String TAG = "StatusBar";
   
     private static final String SHOW_FOURG = "show_fourg";
+    private static final String SHOW_THREEG = "show_threeg";	
     private SwitchPreference mShowFourG;
+    private SwitchPreference mShowThreeG;	
 
-
+    
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
+
 
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
@@ -102,7 +106,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.status_bar_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
+        ContentResolver resolver = getActivity().getContentResolver(); 
+        Context context = getActivity();
 
         PackageManager pm = getPackageManager();
         Resources systemUiResources;
@@ -121,6 +126,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 Settings.System.SHOW_FOURG, 0) == 1));
         }
 
+	mShowThreeG = (SwitchPreference) findPreference(SHOW_THREEG);
+        if (RRUtils.isWifiOnly(getActivity())) {
+            prefSet.removePreference(mShowThreeG);
+        } else {
+        mShowThreeG.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SHOW_THREEG, 0) == 1));
+        }
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent =
                 (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
@@ -169,9 +181,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     resolver, CMSettings.System.STATUS_BAR_BATTERY_STYLE, batteryStyle);
             mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
             enableStatusBarBatteryDependents(batteryStyle);
-            return true;    
-		}
-		else if (preference == mStatusBarBatteryShowPercent) {
+            return true;
+        } else if (preference == mStatusBarBatteryShowPercent) {
             int batteryShowPercent = Integer.valueOf((String) newValue);
             int index = mStatusBarBatteryShowPercent.findIndexOfValue((String) newValue);
             CMSettings.System.putInt(
@@ -189,6 +200,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.SHOW_FOURG, checked ? 1:0);
+            return true;
+        } else if  (preference == mShowThreeG) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SHOW_THREEG, checked ? 1:0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

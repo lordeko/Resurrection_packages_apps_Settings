@@ -23,13 +23,6 @@
             android:fragment="com.android.settings.rr.gestureanywhere.GestureAnywhereSettings"
             android:title="@string/gesture_anywhere_title"
             />
-       <!-- App sidebar -->
-        <PreferenceScreen 
-	    android:id="@+id/app_sidebar"   
-            android:key="app_sidebar"
-            android:fragment="com.android.settings.rr.AppSidebar"
-            android:title="@string/app_sidebar_title"
-            />
 
      <!-- App circlebar -->
      <PreferenceScreen
@@ -44,7 +37,7 @@
 	     android:id="@+id/pie_control"	
              android:key="pa_pie_control"
              android:title="@string/pa_pie_control_title"
-             android:fragment="com.android.settings.paranoid.PieControl"
+             android:fragment="com.android.settings.rr.Pie.PieControl"
              />
 
 </PreferenceScreen>
